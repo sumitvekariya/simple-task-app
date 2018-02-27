@@ -1,0 +1,32 @@
+<div class="container color-dark">
+  <div class="col text-center">
+    <h4>This is what I'm all about.</h4>
+  </div>
+</div>
+
+<div class="container color-light">
+  <div class="col text-center">
+    <br>
+    <ul *ngIf="id!=null">
+      <li>
+        My Goal No. {{ id }} is :
+        <strong>{{ goals[id] }}</strong>
+      </li>
+    </ul>
+
+    <ul *ngIf="id==null">
+      <li *ngFor="let goal of goals, let i = index">
+        My Goal No. {{ i+1 }} is :
+        <strong>{{ goal }}</strong>
+        <br><br>
+      </li>
+    </ul>
+
+
+    <p>-------------------------------------------------------<br>
+      <a routerLink="">
+        <strong>Take me Home</strong>
+      </a>
+    </p>
+  </div>
+</div>
